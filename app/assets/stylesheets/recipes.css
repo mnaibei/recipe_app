@@ -118,16 +118,22 @@ h1 {
     position: relative;
   }
 
+
+/* Styles for the public-to-private switch */
+.toggle-button {
+    display: inline-block;
+    position: relative;
+  }
+
   .toggle-button input[type="checkbox"] {
     display: none;
   }
 
   .toggle-button-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Set the width of the switch */
+    height: 30px; /* Set the height of the switch */
     background-color: #ccc;
     border-radius: 20px;
     cursor: pointer;
@@ -139,14 +145,40 @@ h1 {
     top: 2px;
     left: 2px;
     bottom: 2px;
-    width: 40px;
+    width: 26px; /* Set the width of the switch button */
     background-color: #fff;
     border-radius: 20px;
     transition: 0.2s;
   }
 
   .toggle-button input:checked ~ .toggle-button-label:before {
-    left: calc(100% - 2px);
+    left: calc(100% - 30px); /* Set the position of the switch when turned on */
+  }
+
+  /* Styles to differentiate the switch states (on and off) */
+  .toggle-button-label:before {
+    background-color: #4CAF50; /* Off green color when the switch is off */
+  }
+
+  .toggle-button input:checked ~ .toggle-button-label:before {
+    background-color: #FF0000; /* Red color when the switch is on */
+  }
+
+  /* Additional styles to center the text and avoid overlap */
+  .toggle-button-label:after {
+    content: "Public";
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: #000;
+  }
+
+  .toggle-button input:checked ~ .toggle-button-label:after {
+    content: "Private";
+    left: auto;
+    right: 8px;
+    color: #fff;
   }
 
   .add-food-button {
