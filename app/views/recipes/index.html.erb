@@ -1,7 +1,7 @@
 <div>
   <h1>Recipes</h1>
 
-<%= link_to 'New Recipe', new_recipe_path, class: 'new-recipe-button' %>
+  <%= link_to 'New Recipe', new_recipe_path, class: 'new-recipe-button' %>
   <table>
     <thead>
       <tr>
@@ -23,11 +23,14 @@
           <td><%= recipe.public? ? "Yes" : "No" %></td>
           <td><%= link_to recipe.user.name, user_path(recipe.user) %></td>
           <td>
-            <%= button_to "Remove",
-            recipe,
-            method: :delete,
-            title: "Delete recipe",
-            class: "delete" %></td>
+            <% if can?(:destroy, recipe) %>
+              <%= button_to "Remove",
+                            recipe,
+                            method: :delete,
+                            title: "Delete recipe",
+                            class: "delete" %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
