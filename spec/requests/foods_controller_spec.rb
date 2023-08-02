@@ -16,9 +16,9 @@ RSpec.describe FoodsController, type: :request do
     end
 
     it 'assigns user foods to @foods' do
-      user_food1 = FactoryBot.create(:food, user: user)
-      user_food2 = FactoryBot.create(:food, user: user)
-      other_user_food = FactoryBot.create(:food)
+      user_food1 = FactoryBot.create(:food, user:)
+      user_food2 = FactoryBot.create(:food, user:)
+      FactoryBot.create(:food)
 
       get foods_url
       expect(assigns(:foods)).to match_array([user_food1, user_food2])
@@ -41,9 +41,9 @@ RSpec.describe FoodsController, type: :request do
     context 'with valid attributes' do
       it 'creates a new food' do
         food_params = FactoryBot.attributes_for(:food)
-        expect {
+        expect do
           post foods_url, params: { food: food_params }
-        }.to change(Food, :count).by(1)
+        end.to change(Food, :count).by(1)
       end
 
       it 'redirects to the foods index page' do
@@ -56,23 +56,23 @@ RSpec.describe FoodsController, type: :request do
     context 'with invalid attributes' do
       it 'does not create a new food' do
         invalid_food_params = { name: '', measurement_unit: 'grams', price: -5.0, quantity: 0 }
-        expect {
+        expect do
           post foods_url, params: { food: invalid_food_params }
-        }.not_to change(Food, :count)
+        end.not_to change(Food, :count)
       end
     end
   end
 
   describe 'DELETE #destroy' do
     it 'destroys the food' do
-      food = FactoryBot.create(:food, user: user)
-      expect {
+      food = FactoryBot.create(:food, user:)
+      expect do
         delete food_url(food)
-      }.to change(Food, :count).by(-1)
+      end.to change(Food, :count).by(-1)
     end
 
     it 'redirects to the foods index page' do
-      food = FactoryBot.create(:food, user: user)
+      food = FactoryBot.create(:food, user:)
       delete food_url(food)
       expect(response).to redirect_to(foods_url)
     end

@@ -54,13 +54,6 @@ th {
   background-color: #c82333;
 }
 
-
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -105,13 +98,6 @@ form input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .toggle-button {
   display: inline-block;
   position: relative;
@@ -119,10 +105,6 @@ h1 {
 
 
 /* Styles for the public-to-private switch */
-.toggle-button {
-  display: inline-block;
-  position: relative;
-}
 
 .toggle-button input[type="checkbox"] {
   display: none;
@@ -132,8 +114,10 @@ h1 {
   position: relative;
   display: inline-block;
   width: 80px;
+
   /* Set the width of the switch */
   height: 30px;
+
   /* Set the height of the switch */
   background-color: darkgray;
   border-radius: 20px;
@@ -141,37 +125,30 @@ h1 {
   color: transparent;
 }
 
-.toggle-button-label:before {
+.toggle-button-label::before {
   content: "";
   position: absolute;
   top: 2px;
   left: 2px;
   bottom: 2px;
   width: 26px;
+
   /* Set the width of the switch button */
-  background-color: #fff;
+  background-color: #4caf50;
   border-radius: 20px;
   transition: 0.2s;
 }
 
-.toggle-button input:checked~.toggle-button-label:before {
+.toggle-button input:checked ~ .toggle-button-label::before {
   left: calc(100% - 30px);
+  background-color: #f00;
+
   /* Set the position of the switch when turned on */
 }
 
-/* Styles to differentiate the switch states (on and off) */
-.toggle-button-label:before {
-  background-color: #4CAF50;
-  /* Off green color when the switch is off */
-}
-
-.toggle-button input:checked~.toggle-button-label:before {
-  background-color: #FF0000;
-  /* Red color when the switch is on */
-}
 
 /* Additional styles to center the text and avoid overlap */
-.toggle-button-label:after {
+.toggle-button-label::after {
   content: "Public";
   position: absolute;
   top: 50%;
@@ -180,7 +157,7 @@ h1 {
   color: #fff;
 }
 
-.toggle-button input:checked~.toggle-button-label:after {
+.toggle-button input:checked ~ .toggle-button-label::after {
   content: "Private";
   left: auto;
   right: 8px;
