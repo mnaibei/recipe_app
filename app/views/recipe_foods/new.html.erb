@@ -1,0 +1,17 @@
+<div>
+      <%=form_with url: recipe_recipe_foods_path, class:"form", scope: :recipe_food do |f| %>
+        <div class="">
+          <div class="">
+            <%= f.select :food_id, @foods.collect { |food| [food.name, food.id] }, :prompt => 'Select an Ingredient', class: 'focus:outline-none', required: true %>
+          </div>
+          <div>
+            <%= f.label :quantity, 'Quantity:' %>
+            <%= f.number_field :quantity, step: :any, required: true, class: ''%>
+          </div>
+        </div>
+        <div>
+          <%= f.submit "Add Ingredient", class: ''%>
+        </div> 
+      <% end %>
+    </div>
+  </div>

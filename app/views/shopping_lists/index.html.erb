@@ -1,0 +1,25 @@
+<div class='container'>
+  <h1>Shopping List</h1>
+  <div class='number-price'>
+    <p>Number of items in the shopping list: <%= @shopping_list_count %></p>
+    <p>Total price: $<%= @total_price.abs %></p>
+  </div> 
+  <table class='food-table'>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipe_foods.each_with_index do |recipe_food, index| %>
+        <tr class="<%= index.even? ? 'light-row' : 'dark-row' %>">
+          <td><%= recipe_food.food_name %></td>
+          <td><%= recipe_food.quantity.abs %> <%= recipe_food.measurement_unit %></td>
+          <td>$<%= (recipe_food.food_price * recipe_food.quantity).abs %></td> 
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

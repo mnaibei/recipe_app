@@ -1,0 +1,24 @@
+<div>
+  <h1>Recipes</h1>
+
+  <%= link_to 'New Recipe', new_recipe_path, class: 'new-recipe-button' %>
+  <table>
+    <tbody class="index-body">
+      <% @recipes.each do |recipe| %>
+        <tr class="indexTR">
+          <td class="indexTD"><%= link_to recipe.name, recipe %></td>
+          <td class="indexTD">Description: <%= recipe.description %></td>
+          <td class="indexTD">
+            <% if can?(:destroy, recipe) %>
+              <%= button_to "Remove",
+                            recipe,
+                            method: :delete,
+                            title: "Delete recipe",
+                            class: "delete" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

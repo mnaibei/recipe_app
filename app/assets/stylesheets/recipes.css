@@ -1,0 +1,229 @@
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.new-recipe-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.new-recipe-button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.index-body {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.indexTR {
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.indexTD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: justify;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+
+  /* border-bottom: 1px solid #ccc; */
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.light-row {
+  background-color: #f9f9f9;
+}
+
+.dark-row {
+  background-color: #f2f2f2;
+}
+
+.delete {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: #c82333;
+}
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form h1 {
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="time"],
+form textarea,
+form input[type="checkbox"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.recipe-form input[type="text"],
+.recipe-form input[type="time"],
+.recipe-form input[type="checkbox"],
+.recipe-form textarea {
+  width: 80%;
+}
+
+form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.toggle-button {
+  display: inline-block;
+  position: relative;
+}
+
+/* Styles for the public-to-private switch */
+
+.toggle-button input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-button-label {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+
+  /* Set the width of the switch */
+  height: 30px;
+
+  /* Set the height of the switch */
+  background-color: darkgray;
+  border-radius: 20px;
+  cursor: pointer;
+  color: transparent;
+}
+
+.toggle-button-label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 26px;
+  background-color: #4caf50;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.toggle-button input:checked ~ .toggle-button-label::before {
+  left: calc(100% - 30px);
+  background-color: #f00;
+}
+
+/* Additional styles to center the text and avoid overlap */
+.toggle-button-label::after {
+  content: "Public";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.toggle-button input:checked ~ .toggle-button-label::after {
+  content: "Private";
+  left: auto;
+  right: 8px;
+  color: #fff;
+}
+
+.add-food-button,
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+.add-food-button:hover,
+button:hover {
+  background-color: #0056b3;
+}
+
+.show-td {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
+}
+
+.modify-button,
+.remove-button {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.modify-button:hover,
+.remove-button:hover {
+  background-color: #c82333;
+}

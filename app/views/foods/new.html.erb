@@ -1,0 +1,28 @@
+<div class="form">
+    <h3>New Food</h3>
+    <%= form_with(model: @food, url: foods_path, class:"foods-form", method: :post, data: { turbo: false }) do |form| %>
+        <div class="field">
+            <%= form.label :name, style: "display: block", required: true, autofocus: true %>
+            <%= form.text_field :name %>
+        </div>
+
+        <div class="field">
+            <%= form.label :measurement_unit, style: "display: block", required: true %>
+            <%= form.text_field :measurement_unit %>
+        </div>
+
+        <div class="field">
+            <%= form.label :quantity, style: "display: block", required: true %>
+            <%= form.text_field :quantity %>
+        </div>
+
+        <div class="field">
+            <%= form.label :price, style: "display: block", required: true %>
+            <%= form.number_field :price %>
+        </div>
+
+        <div class="actions">
+            <%= form.submit "Add Food", class: "btn btn-primary", required: true %>
+        </div>
+    <% end %>
+</div>
