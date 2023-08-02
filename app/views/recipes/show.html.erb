@@ -7,20 +7,24 @@
 <p><strong>Description:</strong>
   <%= @recipe.description %></p>
 
-<p>Public
-</p>
-<%= form_with(model: @recipe, url: toggle_public_recipe_path(@recipe), method: :patch, html: { class: 'toggle-button' }) do |form| %>
-  <%= form.check_box :on,
-                 role: "switch",
-                 checked: @recipe.public,
-                 onchange: "this.form.submit()" %>
-  <%= form.label :on, class: "toggle-button-label" %>
+<%# <p>Public
+</p> %>
+<% if can?(:toggle_public, @recipe) %>
+  <%= form_with(model: @recipe, url: toggle_public_recipe_path(@recipe), method: :patch, html: { class: 'toggle-button' }) do |form| %>
+    <%= form.check_box :on,
+                    role: "switch",
+                    checked: @recipe.public,
+                    onchange: "this.form.submit()" %>
+    <%= form.label :on, class: "toggle-button-label" %>
+  <% end %>
 <% end %>
 
-<p><strong>User:</strong>
-  <%= link_to @recipe.user.name, user_path(@recipe.user) %></p>
+
+<p><strong>Created By:</strong>
+  <%= @recipe.user.name %></p>
 
  <%= button_tag link_to "Generate shopping list", shopping_lists_path , class: "add-food-button", disabled: true %>
+ <%= button_tag link_to "add ingredient", new_recipe_recipe_food_path(@recipe) , class: "add-food-button", disabled: true %>
 
 <h2>Foods:</h2>
 <table class="food-table">
@@ -33,14 +37,16 @@
     </tr>
   </thead>
   <tbody>
-    <% @recipe.recipe_foods.each_with_index do |recipe_food, index| %>
+    <% @recipe_foods.each_with_index do |recipe_food, index| %>
       <tr class="<%= index.even? ? 'light-row' : 'dark-row' %>">
         <td><%= recipe_food.food.name %></td>
         <td><%= recipe_food.quantity %><%= recipe_food.food.measurement_unit %></td>
         <td>$ <%= recipe_food.food.price * recipe_food.quantity %></td>
         <td>
           <%= link_to 'Modify', class: 'modify-button' %>
+          <%if can?(:destroy, recipe_food) %>
           <%= button_to 'Remove', food_path(recipe_food.food), method: :delete, data: { confirm: 'Are you sure you want to delete this food item?' }, class: 'remove-button' %>
+          <% end %>
         </td>
       </tr>
     <% end %>

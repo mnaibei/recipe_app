@@ -1,0 +1,64 @@
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#public-recipes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recipe-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.name-container {
+  flex: 1;
+}
+
+.name-container h3 {
+  margin: 0;
+}
+
+.public-recipe-details {
+  text-align: right;
+}
+
+.public-recipe-details p {
+  margin: 5px 0;
+}
+
+.public-recipe-details p:first-child {
+  margin-top: 10px;
+}
+
+.public-recipe-details p:last-child {
+  margin-bottom: 10px;
+}
+
+.recipe-container:hover {
+  background-color: #f9f9f9;
+}
+
+.recipe-container a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.recipe-container a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: If you want to truncate recipe names to a specific number of lines */
+.recipe-container h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Adjust this value as needed */
+  overflow: hidden;
+}

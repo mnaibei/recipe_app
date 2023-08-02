@@ -24,8 +24,10 @@ Rails.application.routes.draw do
     member do
       patch :toggle_public
     end
+    resources :recipe_foods, only: %i[create destroy index new]
   end
 
+  # get 'shopping_list', to: 'recipes#shopping_list', as: 'shopping_list'
   # get 'recipes/new', to: 'recipes#new', as: 'new_recipe'
   # post 'recipes', to: 'recipes#create'
 

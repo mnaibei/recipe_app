@@ -15,7 +15,13 @@ class ShoppingListsController < ApplicationController
       else
         unique_recipe_foods.add(recipe_food)
       end
+
+      # Use abs method to ensure the quantity is positive
+      recipe_food.quantity = recipe_food.quantity.abs
       recipe_food.quantity -= recipe_food.food_quantity
+
+      # Use abs method to ensure the price is positive
+      recipe_food.food_price = recipe_food.food_price.abs
     end
 
     @recipe_foods = unique_recipe_foods.to_a
