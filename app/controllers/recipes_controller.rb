@@ -55,10 +55,11 @@ class RecipesController < ApplicationController
     redirect_to recipe_path(@recipe)
   end
 
-  def generate_shopping_list
-    @recipe = Recipe.find(params[:recipe_id])
-    @shopping_list_items = @recipe.generate_shopping_list_items
-  end
+  #  def shopping_list
+  #   @recipe_id = params[:id]
+  #   @recipe = Recipe.includes(recipe_foods: :food).find(@recipe_id)
+  #   @missing_foods = @recipe.recipe_foods.reject { |food_recipe| inventory_foods_id.include?(food_recipe.food_id) }
+  # end
 
   private
 

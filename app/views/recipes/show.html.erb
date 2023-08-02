@@ -24,6 +24,7 @@
   <%= @recipe.user.name %></p>
 
  <%= button_tag link_to "Generate shopping list", shopping_lists_path , class: "add-food-button", disabled: true %>
+ <%= button_tag link_to "add ingredient", new_recipe_recipe_food_path(@recipe) , class: "add-food-button", disabled: true %>
 
 <h2>Foods:</h2>
 <table class="food-table">
@@ -36,7 +37,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @recipe.recipe_foods.each_with_index do |recipe_food, index| %>
+    <% @recipe_foods.each_with_index do |recipe_food, index| %>
       <tr class="<%= index.even? ? 'light-row' : 'dark-row' %>">
         <td><%= recipe_food.food.name %></td>
         <td><%= recipe_food.quantity %><%= recipe_food.food.measurement_unit %></td>

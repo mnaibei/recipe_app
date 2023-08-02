@@ -20,7 +20,7 @@ class Ability
 
       can :destroy, Recipe, public: true, user_id: nil
       can :toggle_public, Recipe, user_id: user.id
-
+      can :destroy, RecipeFood, food: { user_id: user.id }
     end
   end
 end
