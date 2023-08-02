@@ -1,0 +1,19 @@
+<h1>Public Recipes</h1>
+
+<ul id="public-recipes">
+  <% @public_recipes.each do |recipe| %>
+    <li class="recipe-container" id="<%= dom_id(recipe) %>">
+      <div class="name-container">
+        <h3><%= link_to "#{recipe.name}", recipe_path(recipe) %></h3>
+        <p>By: <strong><i><%= recipe.user.name %></i></strong> </p>
+      </div>
+      <div class="public-recipe-details">
+        <%= link_to recipe_path(recipe) do %>
+          <p>Total food items: <%= recipe.recipe_foods.count %></p>
+          <% total_price = recipe.recipe_foods.joins(:food).sum("foods.price * recipe_foods.quantity") %>
+          <p>Total price: $ <%= total_price.to_i %></p>
+        <% end %>
+      </div>
+    </li>
+  <% end %>
+</ul>
