@@ -104,18 +104,11 @@ rubocop -A
 - Twitter: [MNaibei\_](https://twitter.com/mnaibei_)
 - LinkedIn: [Mucha Julius](https://linkedin.com/in/mucha-julius)
 
-👤 **Fatihah Oduwole**
+👤 **TayyabKM**
 
-- GitHub: [@jeddaa](https://github.com/jeddaa)
-- Twitter: [jeddaah](https://twitter.com/_jeddaah)
-- LinkedIn: [@jedda](https://linkedin.com/in/fatihahoduwole)
-
-<!-- 👤 **Mercy Mugambi**
-
-- GitHub: [@mercymugambi](https://github.com/mercymugambi)
-- Twitter: [@mercymugambi](https://twitter.com/MercyMugambi15)
-- LinkedIn: [@mercymugambi](https://www.linkedin.com/in/mercymugambi/)
-
+- Github: [@TayyabKM](https://github.com/TayyabKM)
+- Twitter: [@TayyabI83126361](https://twitter.com/TayyabI83126361)
+- Linkedin: [@tayyab-irfan-01b72b1aa](https://www.linkedin.com/in/tayyab-irfan-01b72b1aa/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- FUTURE FEATURES -->
