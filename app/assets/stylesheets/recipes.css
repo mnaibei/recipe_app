@@ -21,11 +21,33 @@ table {
   margin-top: 20px;
 }
 
+.index-body {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.indexTR {
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.indexTD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: justify;
+}
+
 th,
 td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ccc;
+
+  /* border-bottom: 1px solid #ccc; */
 }
 
 th {
@@ -54,7 +76,8 @@ th {
   background-color: #c82333;
 }
 
-form {
+
+.form {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -103,7 +126,6 @@ form input[type="submit"]:hover {
   position: relative;
 }
 
-
 /* Styles for the public-to-private switch */
 
 .toggle-button input[type="checkbox"] {
@@ -132,8 +154,6 @@ form input[type="submit"]:hover {
   left: 2px;
   bottom: 2px;
   width: 26px;
-
-  /* Set the width of the switch button */
   background-color: #4caf50;
   border-radius: 20px;
   transition: 0.2s;
@@ -142,10 +162,7 @@ form input[type="submit"]:hover {
 .toggle-button input:checked ~ .toggle-button-label::before {
   left: calc(100% - 30px);
   background-color: #f00;
-
-  /* Set the position of the switch when turned on */
 }
-
 
 /* Additional styles to center the text and avoid overlap */
 .toggle-button-label::after {
@@ -180,6 +197,13 @@ button {
 .add-food-button:hover,
 button:hover {
   background-color: #0056b3;
+}
+
+.show-td {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
 }
 
 .modify-button,

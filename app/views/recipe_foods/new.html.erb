@@ -1,5 +1,5 @@
 <div>
-      <%=form_with url: recipe_recipe_foods_path, scope: :recipe_food do |f| %>
+      <%=form_with url: recipe_recipe_foods_path, class:"form", scope: :recipe_food do |f| %>
         <div class="">
           <div class="">
             <%= f.select :food_id, @foods.collect { |food| [food.name, food.id] }, :prompt => 'Select an Ingredient', class: 'focus:outline-none', required: true %>
