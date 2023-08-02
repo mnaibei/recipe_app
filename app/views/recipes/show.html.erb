@@ -7,18 +7,21 @@
 <p><strong>Description:</strong>
   <%= @recipe.description %></p>
 
-<p>Public
-</p>
-<%= form_with(model: @recipe, url: toggle_public_recipe_path(@recipe), method: :patch, html: { class: 'toggle-button' }) do |form| %>
-  <%= form.check_box :on,
-                 role: "switch",
-                 checked: @recipe.public,
-                 onchange: "this.form.submit()" %>
-  <%= form.label :on, class: "toggle-button-label" %>
+<%# <p>Public
+</p> %>
+<% if can?(:toggle_public, @recipe) %>
+  <%= form_with(model: @recipe, url: toggle_public_recipe_path(@recipe), method: :patch, html: { class: 'toggle-button' }) do |form| %>
+    <%= form.check_box :on,
+                    role: "switch",
+                    checked: @recipe.public,
+                    onchange: "this.form.submit()" %>
+    <%= form.label :on, class: "toggle-button-label" %>
+  <% end %>
 <% end %>
 
-<p><strong>User:</strong>
-  <%= link_to @recipe.user.name, user_path(@recipe.user) %></p>
+
+<p><strong>Created By:</strong>
+  <%= @recipe.user.name %></p>
 
  <%= button_tag link_to "Generate shopping list", shopping_lists_path , class: "add-food-button", disabled: true %>
 
