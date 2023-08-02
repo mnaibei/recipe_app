@@ -1,6 +1,6 @@
 <h1>New Recipe</h1>
 
-<%= form_with(model: @recipe, class: "recipe-form", method: :post, class: "form") do |form| %>
+<%= form_with(model: @recipe, method: :post, class: "form") do |form| %>
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
