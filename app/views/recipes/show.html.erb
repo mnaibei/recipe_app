@@ -24,11 +24,11 @@
   <%= @recipe.user.name %></p>
 
  <%= button_tag link_to "Generate shopping list", shopping_lists_path , class: "add-food-button", disabled: true %>
- <%= button_tag link_to "add ingredient", new_recipe_recipe_food_path(@recipe) , class: "add-food-button", disabled: true %>
+ <%= button_tag link_to "Add ingredient", new_recipe_recipe_food_path(@recipe) , class: "add-food-button", disabled: true %>
 
 <h2>Foods:</h2>
 <table class="food-table">
-  <thead>
+  <thead class="show-head">
     <tr>
       <th>Food</th>
       <th>Quantity</th>
@@ -42,7 +42,7 @@
         <td><%= recipe_food.food.name %></td>
         <td><%= recipe_food.quantity %><%= recipe_food.food.measurement_unit %></td>
         <td>$ <%= recipe_food.food.price * recipe_food.quantity %></td>
-        <td>
+        <td class="show-td">
           <%= link_to 'Modify', class: 'modify-button' %>
           <%if can?(:destroy, recipe_food) %>
           <%= button_to 'Remove', food_path(recipe_food.food), method: :delete, data: { confirm: 'Are you sure you want to delete this food item?' }, class: 'remove-button' %>

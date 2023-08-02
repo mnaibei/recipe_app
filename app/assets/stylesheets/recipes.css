@@ -21,11 +21,32 @@ table {
   margin-top: 20px;
 }
 
+.index-body {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.indexTR {
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.indexTD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: justify;
+}
+
 th,
 td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
 }
 
 th {
@@ -54,14 +75,12 @@ th {
   background-color: #c82333;
 }
 
-
-
 h1 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-form {
+.form {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -105,8 +124,6 @@ form input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-
-
 h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -116,7 +133,6 @@ h1 {
   display: inline-block;
   position: relative;
 }
-
 
 /* Styles for the public-to-private switch */
 .toggle-button {
@@ -203,6 +219,13 @@ button {
 .add-food-button:hover,
 button:hover {
   background-color: #0056b3;
+}
+
+.show-td {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 20px;
 }
 
 .modify-button,
