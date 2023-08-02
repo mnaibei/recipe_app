@@ -76,6 +76,7 @@ th {
   background-color: #c82333;
 }
 
+
 .form {
   max-width: 400px;
   margin: 0 auto;
@@ -154,8 +155,6 @@ form input[type="submit"]:hover {
   bottom: 2px;
   width: 26px;
   background-color: #4caf50;
-
-  /* Set the width of the switch button */
   border-radius: 20px;
   transition: 0.2s;
 }
@@ -163,8 +162,6 @@ form input[type="submit"]:hover {
 .toggle-button input:checked ~ .toggle-button-label::before {
   left: calc(100% - 30px);
   background-color: #f00;
-
-  /* Set the position of the switch when turned on */
 }
 
 /* Additional styles to center the text and avoid overlap */
