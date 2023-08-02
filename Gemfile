@@ -29,6 +29,7 @@ gem 'cancancan'
 gem 'devise'
 gem 'erb-formatter'
 gem 'jbuilder'
+gem 'bullet'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
