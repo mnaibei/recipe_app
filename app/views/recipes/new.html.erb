@@ -1,6 +1,6 @@
 <h1>New Recipe</h1>
 
-<%= form_with(model: @recipe, method: :post, class:"form") do |form| %>
+<%= form_with(model: @recipe, class: "recipe-form", method: :post, class: "form") do |form| %>
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -8,12 +8,12 @@
 
   <div>
     <%= form.label :preparation_time %>
-    <%= form.time_field :preparation_time %>
+    <%= form.time_field :preparation_time, pattern: "\d{2}:\d{2}" %>
   </div>
 
   <div>
     <%= form.label :cooking_time %>
-    <%= form.time_field :cooking_time %>
+    <%= form.time_field :cooking_time, pattern: "\d{2}:\d{2}" %>
   </div>
 
   <div>

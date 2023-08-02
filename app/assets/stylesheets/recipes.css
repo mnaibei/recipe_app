@@ -76,7 +76,6 @@ th {
   background-color: #c82333;
 }
 
-
 .form {
   max-width: 400px;
   margin: 0 auto;
@@ -102,10 +101,16 @@ form input[type="text"],
 form input[type="time"],
 form textarea,
 form input[type="checkbox"] {
-  width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.recipe-form input[type="text"],
+.recipe-form input[type="time"],
+.recipe-form input[type="checkbox"],
+.recipe-form textarea {
+  width: 80%;
 }
 
 form input[type="submit"] {

@@ -1,6 +1,6 @@
 <div class="form">
     <h3>New Food</h3>
-    <%= form_with(model: @food, url: foods_path, method: :post, data: { turbo: false }) do |form| %>
+    <%= form_with(model: @food, url: foods_path, class:"foods-form", method: :post, data: { turbo: false }) do |form| %>
         <div class="field">
             <%= form.label :name, style: "display: block", required: true, autofocus: true %>
             <%= form.text_field :name %>

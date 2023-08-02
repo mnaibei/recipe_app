@@ -84,14 +84,14 @@
 
 .field input[type="text"],
 .field input[type="number"] {
-  width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-.actions {
-  text-align: right;
+.foods-form input[type="text"],
+.foods-form input[type="number"] {
+  width: 80%;
 }
 
 .actions input[type="submit"] {
