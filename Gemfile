@@ -25,6 +25,7 @@ gem 'turbo-rails'
 gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem 'bullet'
 gem 'cancancan'
 gem 'devise'
 gem 'erb-formatter'

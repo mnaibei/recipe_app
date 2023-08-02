@@ -19,9 +19,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Blog App <a name="about-project"></a>
+# 📖 Recipe App <a name="about-project"></a>
 
-- This is a ruby on rails project
+- This is a recipe app built with Ruby on Rails
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -32,6 +32,8 @@
 ## Key Features
 
 - Ruby syntax and use of linters
+- Rails controllers
+- Rails views
 
 <!-- GETTING STARTED -->
 
@@ -58,7 +60,7 @@ Example commands:
 
 ```sh
 
-  git clone git@github.com:mnaibei/blog_app.git
+  git clone git@github.com:mnaibei/recipe_app.git
   cd blog_app
 
 
@@ -94,6 +96,12 @@ Example command:
 rubocop -A
 ```
 
+To run spec tests, run the following command:
+
+```sh
+rspec
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -104,18 +112,11 @@ rubocop -A
 - Twitter: [MNaibei\_](https://twitter.com/mnaibei_)
 - LinkedIn: [Mucha Julius](https://linkedin.com/in/mucha-julius)
 
-👤 **Fatihah Oduwole**
+👤 **TayyabKM**
 
-- GitHub: [@jeddaa](https://github.com/jeddaa)
-- Twitter: [jeddaah](https://twitter.com/_jeddaah)
-- LinkedIn: [@jedda](https://linkedin.com/in/fatihahoduwole)
-
-<!-- 👤 **Mercy Mugambi**
-
-- GitHub: [@mercymugambi](https://github.com/mercymugambi)
-- Twitter: [@mercymugambi](https://twitter.com/MercyMugambi15)
-- LinkedIn: [@mercymugambi](https://www.linkedin.com/in/mercymugambi/)
-
+- Github: [@TayyabKM](https://github.com/TayyabKM)
+- Twitter: [@TayyabI83126361](https://twitter.com/TayyabI83126361)
+- Linkedin: [@tayyab-irfan-01b72b1aa](https://www.linkedin.com/in/tayyab-irfan-01b72b1aa/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- FUTURE FEATURES -->
@@ -123,7 +124,7 @@ rubocop -A
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] More complex ruby commands.
-- **Implement the ui**
+- **More menus**
 - **Modify the login process**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -134,7 +135,7 @@ rubocop -A
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [Isuues Pages](https://github.com/mercymugambi/vet_clinic/issues)
+Feel free to check the [Issues Pages](https://github.com/mnaibei/recipe_app/issues)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -158,6 +159,6 @@ I would like to thank Microverse.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/mnaibei/blog_app/blob/dev/LICENSE) licensed.
+This project is [MIT](https://github.com/mnaibei/recipe_app/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
