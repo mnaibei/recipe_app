@@ -1,4 +1,5 @@
 class ShoppingListsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @user = current_user
     @recipe_foods = @user.recipes.joins(recipe_foods: :food).select('recipe_foods.*, recipes.name AS recipe_name,
